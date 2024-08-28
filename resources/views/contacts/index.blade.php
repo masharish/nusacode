@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layouts.main')
 
 @section('judul')
 Halaman Contact

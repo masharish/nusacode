@@ -47,6 +47,6 @@ Halaman Contact
 </form>
 
     
-</div>
+
 
 @endsection

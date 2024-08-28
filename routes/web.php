@@ -7,28 +7,41 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home', [
+//         "title" => "Home"
+//     ]);})->name('home');
 
-Route::get('/layanan', function () {
-    return view('layanan');
-})->name('layanan');
+Route::get('/blog', function () {
+    return view('blog', [
+        "title" => "Blog"
+    ]);})->name('blog');
 
-Route::get('/tentang', function () {
-    return view('tentang');
-})->name('tentang');
+Route::get('/about', function () {
+    return view('about', [
+        "title" => "About"
+    ]);
+})->name('about');
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contacts');
 })->name('contact');
 
 // CRUD Contact
 
 Route::resource('contacts', ContactController::class);
 
+Route::get('/dashboard', function() {
+    return view('dashboard.index');
+});
 
+Route::get('/', function() {
+    return view('layouts.main1');
+});
 
+Route::get('/berita', function() {
+    return view('dashboard.berita.index');
+});
 
 
 
